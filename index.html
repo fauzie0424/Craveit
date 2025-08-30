@@ -3,51 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crave It - Food Delivery</title>
+  <title>CraveIt - Food Delivery</title>
   <style>
-    body {font-family: Arial; text-align: center; background:#f9fafb; color:#111;}
-    h1 {color:#16a34a;}
-    button {padding:10px 20px; margin:5px; border:none; border-radius:8px; cursor:pointer;}
-    .pay {background:#22c55e; color:white;}
-    .whatsapp {background:#3b82f6; color:white;}
-    hr {margin:20px 0;}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffaf7;
+      color: #333;
+    }
+    header {
+      background: #ff5722;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .item {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .item img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .item h3 {
+      margin: 10px 0 5px;
+    }
+    .price {
+      color: #ff5722;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .order-btn {
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .order-btn:hover {
+      background: #1ebd5a;
+    }
   </style>
 </head>
 <body>
-  <h1>🍔 Crave It</h1>
-  <p>Delicious food, delivered to your doorstep 🚀</p>
-  <hr>
 
-  <!-- Pizza -->
-  <h2>Margherita Pizza - ₹199</h2>
-  <a href="upi://pay?pa=YOUR-UPI-ID&pn=Crave+It&am=199&cu=INR">
-    <button class="pay">Pay ₹199</button>
-  </a>
-  <a href="https://wa.me/91YOURNUMBER?text=Hello,+I+have+paid+₹199+for+Margherita+Pizza.">
-    <button class="whatsapp">Confirm on WhatsApp</button>
-  </a>
-  <hr>
+  <header>CraveIt 🍔</header>
 
-  <!-- Burger -->
-  <h2>Veg Burger - ₹99</h2>
-  <a href="upi://pay?pa=YOUR-UPI-ID&pn=Crave+It&am=99&cu=INR">
-    <button class="pay">Pay ₹99</button>
-  </a>
-  <a href="https://wa.me/91YOURNUMBER?text=Hello,+I+have+paid+₹99+for+Veg+Burger.">
-    <button class="whatsapp">Confirm on WhatsApp</button>
-  </a>
-  <hr>
+  <section class="menu">
+    <div class="item">
+      <img src="https://source.unsplash.com/400x300/?burger" alt="Burger">
+      <h3>Cheese Burger</h3>
+      <p class="price">₹120</p>
+      <a class="order-btn" href="https://wa.me/918884691695?text=I want to order a Cheese Burger (₹120)" target="_blank">Order on WhatsApp</a>
+    </div>
 
-  <!-- Cold Coffee -->
-  <h2>Cold Coffee - ₹79</h2>
-  <a href="upi://pay?pa=YOUR-UPI-ID&pn=Crave+It&am=79&cu=INR">
-    <button class="pay">Pay ₹79</button>
-  </a>
-  <a href="https://wa.me/91YOURNUMBER?text=Hello,+I+have+paid+₹79+for+Cold+Coffee.">
-    <button class="whatsapp">Confirm on WhatsApp</button>
-  </a>
-  <hr>
+    <div class="item">
+      <img src="https://source.unsplash.com/400x300/?pizza" alt="Pizza">
+      <h3>Veggie Pizza</h3>
+      <p class="price">₹250</p>
+      <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order a Veggie Pizza (₹250)" target="_blank">Order on WhatsApp</a>
+    </div>
 
-  <p style="color:gray;">© 2025 Crave It</p>
+    <div class="item">
+      <img src="https://source.unsplash.com/400x300/?pasta" alt="Pasta">
+      <h3>White Sauce Pasta</h3>
+      <p class="price">₹180</p>
+      <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order White Sauce Pasta (₹180)" target="_blank">Order on WhatsApp</a>
+    </div>
+  </section>
+
 </body>
-      </html>
+  </html>
